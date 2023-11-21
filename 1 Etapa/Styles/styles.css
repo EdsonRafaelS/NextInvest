@@ -1,0 +1,216 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to bottom, #015262, #029EA8);
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* Força a barra de rolagem */
+    color: #444;
+    background-attachment: fixed;
+    margin-bottom: 50px; /* Adiciona uma margem de 50px no final da tela */
+}
+
+.content {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: justify;
+    background-color: #edf1f2; /* Fundo semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil no conteúdo */
+}
+
+.brand-name {
+    font-size: 3rem;
+    color: #2A5298;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #2A5298;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.highlight {
+    color: #2A5298;
+    font-weight: 600;
+    text-align: center;
+}
+
+ul {
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+
+li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+li::before {
+    content: "⦿";
+    color: #2A5298;
+    font-size: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#Bem-vindo{
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.action-buttons {
+    text-align: center;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn {
+    padding: 15px 15px; /* Aumenta ainda mais o tamanho dos botões */
+    margin: 20px 25px;
+    margin-bottom: 175px;
+    height: 90px;
+    border: 2px solid;
+    border-radius: 20px;
+    font-size: 25px; /* Torna o texto do botão um pouco maior */
+    cursor: pointer;
+    color: #FFF;
+    transition: background-color 0.3s, border-color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil nos botões */
+}
+
+.btn-idealista {
+    background: #0375e8; /* Tonalidade mais vibrante */
+    border-color: #1f4a78;
+}
+
+.btn-idealista:hover {
+    background: #0c549b;
+    border-color: #071d35;
+}
+
+.btn-investidor {
+    background: #0fae5f; /* Tonalidade mais vibrante */
+    border-color: #0f673b;
+}
+
+.btn-investidor:hover {
+    background: #0b8045;
+    border-color: #0a5830;
+}
+
+/* Classe que será aplicada ao rolar até o final da página */
+.action-buttons.visible {
+    opacity: 1; /* Torna visível */
+    pointer-events: auto; /* Permite interações */
+}
+
+.terms-container {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: justify;
+    background-color: #edf1f2; /* Fundo semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 10px 15px black; /* Corrigido: Sombra sutil no conteúdo */
+}
+
+.terms-option {
+    margin-top: 20px;
+    margin-bottom: 50px; /* Adicionado: Margem de 50px do final da tela */
+}
+
+button#acceptTerms{
+    font-size: 15px;
+}
+
+.terms-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.terms-content h3 {
+    color: #2A5298;
+}
+
+.terms-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.terms-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+    max-height: 300px; /* Defina a altura desejada */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando o conteúdo é longo */
+}
+
+.terms-option {
+    margin-top: 20px;
+    margin-bottom: 50px; /* Adicionando margem inferior de 50px */
+}
+
+.terms-option input {
+    margin-right: 5px;
+}
+
+
+.action-buttons {
+    text-align: center;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+button#adm{
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    margin :30px;
+    margin-top: 0;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .action-buttons {
+        text-align: center;
+        margin: 20px 0; /* Espaçamento entre os botões */
+    }
+
+    .btn {
+        width: 100%; /* Largura total */
+        margin: 5px 0; /* Espaçamento de 5 pixels acima e abaixo */
+    }
+}
+

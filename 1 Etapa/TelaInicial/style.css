@@ -1,0 +1,311 @@
+/*-------------------------------------------------------
+Project     : SafeCommunity
+Author      : SafeCommunity Projeto Integrador
+Description : Front-end por Yasmin
+Designer    : Yasmin Lopes
+Version     : 1.0.0
+-------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+
+/*-------------------------------------------------------
+Navbar
+-------------------------------------------------------*/
+.navbar {
+  padding: 20px;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 50px;
+}
+
+.navbar .nav-link {
+  font-size: 1.2rem;  
+  margin: 0 20px;
+  font-weight: 600;
+  font-family: 'Baloo Thambi 2', cursive;
+
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #160045 !important;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #C0A3FF;
+  border-radius: 5px;
+  margin: auto;
+  padding-bottom: 5px;
+  margin-bottom: -8px;
+}
+
+.login-btn {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  transition: all 0.5s;
+  background-color: #C0A3FF;
+  border: 2px solid #C0A3FF;
+  color: #fff;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: 700;
+  width: 120px;
+}
+
+.login-btn:hover {
+  color: #C0A3FF;
+  background-color: #fff;
+}
+
+/*-------------------------------------------------------
+Frist Section
+-------------------------------------------------------*/
+.first-section .site-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1em;
+  color: #250074;
+  letter-spacing: -2px;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+.first-section .site-description {
+  font-size: 1.6rem;
+  color: 676767;
+  font-weight: 400;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+.cadastrar-btn {
+  font-size: 25px;
+  border-radius: 10px;
+  transition: all 0.5s;
+  background-color: #5454D4;
+  border: 2px solid #5454D4;
+  color: #fff;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: 500;
+  height: 100px;
+  width: 300px;
+  padding: 29px;
+}
+
+.cadastrar-btn:hover {
+  color: #5454D4;
+  background-color: #fff;
+}
+
+.cadastrar-btn .bi {
+  font-size: 1rem;
+}
+
+.Cadastrar {
+  height: 200px;
+  width: 200px;
+  margin-right: 15px; /* Isso adiciona um espaçamento entre os botões */
+}
+
+#btnContainer {
+  display: flex;
+  flex-direction: column; /* Alterado para exibir os botões verticalmente */
+}
+
+.cadastrar-btn + .cadastrar-btn {
+  margin-top: 15px;
+}
+
+
+
+
+/*-------------------------------------------------------
+Main Section
+-------------------------------------------------------*/
+main {
+  margin-top: 70px;
+}
+
+/*-------------------------------------------------------
+Sobre
+-------------------------------------------------------*/
+.sobre-titulo {
+  color: #160045;
+  font-weight: 800;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+.sobre-descricao {
+  font-size: 1.2rem;
+  color: #333333;
+  font-weight: 400;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+.sobre {
+  margin-top: 70px;
+}
+
+.more-btn {
+  padding: 0;
+  font-size: 1.1rem;
+  color: #5454D4;
+  font-weight: 800;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+.more-btn .bi {
+  font-size: 1.7rem;
+}
+
+/*-------------------------------------------------------
+Recompenas
+-------------------------------------------------------*/
+.recompensas-section {
+  margin-top: 70px;
+}
+
+.recompensas-description {
+  font-size: 1.2rem;
+  color: #333333;
+  font-weight: 500;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+.recompensas-title {
+  font-weight: 800;
+  font-family: 'Baloo Thambi 2', cursive;
+  color: #160045;
+  letter-spacing: -1.5px;
+}
+
+/*estilo da div column*/
+.recompensas-row {
+  display: flex;
+  flex-direction: row;
+
+}
+
+/*-------------------------------------------------------
+Footer
+-------------------------------------------------------*/
+footer {
+  margin-top: 100px;
+  padding-bottom: 30px;
+}
+
+footer .copyright {
+  font-size: 1.1rem;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+footer .copyright a {
+  text-decoration: none;
+  color: #5454D4;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+footer .social-icon .bi {
+  padding: 0 20px;
+  font-size: 1.5rem;
+  color: #19191B;
+}
+
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #dcdcf6;
+  color: #160045;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  width: 4.2rem;
+}
+
+#topBtn:hover {
+  background-color: #160045;
+  color: #fff;
+}
+
+#topBtn .bi {
+  font-size: 2rem;
+}
+
+
+#sobre {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+#sobre .individual {
+  margin-right: 15px;
+  text-align: center;  /* Para centralizar o texto abaixo da imagem */
+}
+
+#sobre .individual:last-child {
+  margin-right: 0;  /* Remove o espaçamento à direita da última imagem */
+}
+#sobre img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;  /* Mantém a proporção da imagem, mas a corta para se ajustar ao tamanho definido */
+}
+
+#NameProfissionais{
+  font-size: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+#SobreTotal{
+  margin-top: 100px;
+}
+
+
+
+
+button#adm{
+  background-color: #ffffff;
+  width: 200px;
+  margin: auto;
+  padding: 5px;
+  border-radius: 20px;
+  border-color: #c8c8cd;
+  border-style: 1px;
+}
+
+/* Adicione estas regras ao seu arquivo style.css */
+
+@media (max-width: 767px) {
+  /* Estilos para telas menores que 768px de largura (dispositivos móveis) */
+
+  #sobre {
+    flex-direction: column; /* Altera a direção do flex container para coluna */
+  }
+
+  #sobre .individual {
+    flex-basis: 100%; /* Garante que cada 'individual' ocupe 100% da largura da tela */
+    margin-right: 0; /* Remove o espaçamento à direita da última imagem */
+  }
+}
+    footer img {
+      width: 100%; /* Faz com que a imagem ocupe 100% da largura do contêiner pai */
+      height: auto; /* Mantém a proporção da imagem */
+    }

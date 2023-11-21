@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #2ebdff;
+}
+
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Euclid Circular A";
+    background-image: linear-gradient(to bottom, #015262, #029EA8);
+    color: #f9f9f9;
+    padding-top: 72px;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    background: #000000;
+    width: 100%;
+}
+
+.navbar h1 {
+    display: none;
+    flex: 2 1 auto;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 0 16px;
+}
+
+@media (width >=440px) {
+    .navbar {
+        top: 0;
+        bottom: auto;
+    }
+
+    @media (max-width: 439px) {
+        body {
+            padding-top: 0;
+            padding-bottom: 72px;
+        }
+    }
+
+
+    .tabs {
+        scale: 0.8;
+        width: 200px;
+    }
+
+    .navbar h1 {
+        display: block;
+    }
+}
+
+.tabs {
+    flex: 1 1 auto;
+}
+
+.tabs>input {
+    display: none;
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+label {
+    position: relative;
+    z-index: 3;
+    padding: 20px;
+    font-size: 15px;
+    flex: 1 1 auto;
+    min-width: 58px;
+    opacity: 0.35;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.buttons {
+    position: relative;
+    display: flex;
+}
+
+.underline {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0px;
+    width: 25%;
+    display: grid;
+    place-items: center;
+    transition: 0.3s;
+}
+
+.underline::after {
+    content: "";
+    display: block;
+    translate: 0 -15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.tabs input:nth-child(1):checked~.buttons .underline {
+    translate: 0 0;
+}
+
+.tabs input:nth-child(2):checked~.buttons .underline {
+    translate: 100% 0;
+}
+
+.tabs input:nth-child(3):checked~.buttons .underline {
+    translate: 200% 0;
+}
+
+.tabs input:nth-child(4):checked~.buttons .underline {
+    translate: 300% 0;
+}
+
+.tabs input:nth-child(1):checked~.buttons label:nth-child(1),
+.tabs input:nth-child(2):checked~.buttons label:nth-child(2),
+.tabs input:nth-child(3):checked~.buttons label:nth-child(3),
+.tabs input:nth-child(4):checked~.buttons label:nth-child(4) {
+    opacity: 1;
+    color: black;
+}
+
+#Slogam {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.idealista{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+.Post{
+    background-color: white;
+    padding: 20px;
+    color: #000;
+    border: 1px black;
+    box-shadow: 10px 10px 15px black;
+    width: 700px;
+    max-width: 100%; /* Faça com que a largura máxima seja 100% para evitar estouro em telas menores */
+    overflow-y: auto;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    border-radius: 20px;
+    display: block;
+}
+
+h1#Post {
+    text-align: center;
+}
+
+form#Post {
+    margin-bottom: 20px;
+}
+
+label#Post {
+    display: block;
+    opacity: 100%;
+    text-align: justify;
+}
+
+input#Post,
+textarea#Post {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    resize: vertical;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+button#Post {
+    background-color: #015262;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#Post:hover {
+    background-color: #029EA8;
+}
+
+h2#Post {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+/* Media Query para dispositivos com tela maior que 768px (exemplo: tablets, desktops) */
+@media screen and (max-width: 1040px) {
+    form {
+        width: 90%;
+        margin-right: 20px;
+        padding: 20px;
+        box-shadow: 0 0 0 black;
+        border: 10px;
+        border-color: #000000;
+    }
+    
+    label#titulo, label#tema, label#descricao {
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input, textarea {
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        padding: 10px 15px;
+    }
+
+    .investidor{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 20px;
+        margin-top: -80px;
+    }
+}
+
+.material-symbols-outlined {
+    text-decoration: none;
+}
+

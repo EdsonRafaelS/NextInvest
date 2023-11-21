@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #2ebdff;
+}
+
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Euclid Circular A";
+    background-image: linear-gradient(to bottom, #015262, #029EA8);
+    color: #f9f9f9;
+    padding-top: 72px;
+    /* Adicionado um padding igual à altura do navbar */
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    background: #000000;
+    width: 100%;
+}
+
+.navbar h1 {
+    display: none;
+    flex: 2 1 auto;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 0 16px;
+}
+
+@media (width >=440px) {
+    .navbar {
+        top: 0;
+        bottom: auto;
+    }
+
+    @media (max-width: 439px) {
+        body {
+            padding-top: 0;
+            padding-bottom: 72px;
+        }
+    }
+
+
+    .tabs {
+        scale: 0.8;
+        width: 200px;
+    }
+
+    .navbar h1 {
+        display: block;
+    }
+}
+
+.tabs {
+    flex: 1 1 auto;
+}
+
+.tabs>input {
+    display: none;
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+label {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    font-size: 15px;
+    flex: 1 1 auto;
+    min-width: 58px;
+    opacity: 0.35;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.buttons {
+    position: relative;
+    display: flex;
+}
+
+.underline {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: -3px;
+    width: 25%;
+    display: grid;
+    place-items: center;
+    transition: 0.3s;
+}
+
+.underline::after {
+    content: "";
+    display: block;
+    translate: 0 -15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.tabs input:nth-child(1):checked~.buttons .underline {
+    translate: 0 0;
+}
+
+.tabs input:nth-child(2):checked~.buttons .underline {
+    translate: 100% 0;
+}
+
+.tabs input:nth-child(3):checked~.buttons .underline {
+    translate: 200% 0;
+}
+
+.tabs input:nth-child(4):checked~.buttons .underline {
+    translate: 300% 0;
+}
+
+.tabs input:nth-child(1):checked~.buttons label:nth-child(1),
+.tabs input:nth-child(2):checked~.buttons label:nth-child(2),
+.tabs input:nth-child(3):checked~.buttons label:nth-child(3),
+.tabs input:nth-child(4):checked~.buttons label:nth-child(4) {
+    opacity: 1;
+    color: black;
+}
+
+#Slogam {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.investidor{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+
+/* Estilos para a div config */
+.config-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: "Euclid Circular A", Arial, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    box-shadow: 10px 10px 15px black;
+    opacity: 1;
+}
+
+.config-h2 {
+    font-size: 30px;
+    opacity: 1;
+}
+
+/* Estilos para os campos de configuração */
+.config-field {
+    margin-bottom: 20px;
+    opacity: 1;
+}
+
+.config-field label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    opacity: 1;
+    text-align: justify;
+}
+
+.config-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+button {
+    background-color: #2ebdff; /* Cor de fundo original */
+    color: white; /* Cor do texto original */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efeito de hover para o botão */
+button:hover {
+    background-color: #015262; /* Nova cor de fundo ao passar o mouse */
+    color: #2ebdff; /* Nova cor do texto ao passar o mouse */
+}

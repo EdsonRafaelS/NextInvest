@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #2ebdff;
+}
+
+html,
+body,
+.wrapper {
+        height: 100%;
+}
+body {
+    margin: 0;
+    font-family: "Euclid Circular A";
+    background-image: linear-gradient(to bottom, #015262, #029EA8);
+    color: #f9f9f9;
+    padding-top: 72px;
+    /* Adicionado um padding igual à altura do navbar */
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    background: #000000;
+    width: 100%;
+}
+
+.navbar h1 {
+    display: none;
+    flex: 2 1 auto;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 0 16px;
+}
+
+@media (width >=440px) {
+    .navbar {
+        top: 0;
+        bottom: auto;
+    }
+
+    @media (max-width: 439px) {
+        body {
+            padding-top: 0;
+            padding-bottom: 72px;
+        }
+    }
+
+
+    .tabs {
+        scale: 0.8;
+        width: 200px;
+    }
+
+    .navbar h1 {
+        display: block;
+    }
+}
+
+.tabs {
+    flex: 1 1 auto;
+}
+
+.tabs>input {
+    display: none;
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+label {
+    position: relative;
+    z-index: 3;
+    padding: 20px;
+    font-size: 15px;
+    flex: 1 1 auto;
+    min-width: 58px;
+    opacity: 0.35;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.buttons {
+    position: relative;
+    display: flex;
+}
+
+.underline {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0px;
+    width: 25%;
+    display: grid;
+    place-items: center;
+    transition: 0.3s;
+}
+
+.underline::after {
+    content: "";
+    display: block;
+    translate: 0 -15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.tabs input:nth-child(1):checked~.buttons .underline {
+    translate: 0 0;
+}
+
+.tabs input:nth-child(2):checked~.buttons .underline {
+    translate: 100% 0;
+}
+
+.tabs input:nth-child(3):checked~.buttons .underline {
+    translate: 200% 0;
+}
+
+.tabs input:nth-child(4):checked~.buttons .underline {
+    translate: 300% 0;
+}
+
+.tabs input:nth-child(1):checked~.buttons label:nth-child(1),
+.tabs input:nth-child(2):checked~.buttons label:nth-child(2),
+.tabs input:nth-child(3):checked~.buttons label:nth-child(3),
+.tabs input:nth-child(4):checked~.buttons label:nth-child(4) {
+    opacity: 1;
+    color: black;
+}
+
+#Slogam {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.idealista{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+#idealizador-section {
+    visibility: hidden;
+}
+
+form {
+    margin-top: -200px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 20px 20px 25px black;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label#titulo, label#tema, label#descricao{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: black !important;
+    text-align: left;
+    opacity: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea{
+    resize: vertical;
+    max-height: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+div#Form {
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Media Query para dispositivos com tela maior que 768px (exemplo: tablets, desktops) */
+@media screen and (max-width: 1040px) {
+    form {
+        width: 90%;
+        margin-right: 20px;
+        padding: 20px;
+        box-shadow: 0 0 0 black;
+        border: 10px;
+        border-color: #000000;
+    }
+    
+    label#titulo, label#tema, label#descricao {
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input, textarea {
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        padding: 10px 15px;
+    }
+
+    .investidor{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 20px;
+        margin-top: -80px;
+    }
+}
+
+.material-symbols-outlined {
+    text-decoration: none;
+}
+

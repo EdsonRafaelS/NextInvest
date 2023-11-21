@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Adicione uma cor de fundo para a página */
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff; /* Adicione uma cor de fundo para a tabela */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicione uma sombra à tabela */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Adicione uma cor de borda */
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50; /* Adicione uma cor de fundo para o cabeçalho da tabela */
+    color: white;
+}
+
+td a {
+    text-decoration: none;
+    color: #f00; /* Adicione uma cor para os links de remoção */
+    cursor: pointer;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
